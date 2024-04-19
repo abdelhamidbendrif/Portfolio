@@ -27,6 +27,7 @@ html{
     background-color: #ffaa17;
     border-radius: 10px;
     border: 1px solid #ffaa17;
+    
 }
 .btn:hover{
     color: #ffaa17;
@@ -61,6 +62,22 @@ section{
     max-width: 120px; /* Set the maximum width */
     height: auto; /* Maintain aspect ratio */
 }
+.icons {
+    margin-bottom: 10px; /* Adjust margin */
+}
+
+.icons > div {
+    display: inline-block;
+    margin: 0 10px;
+    margin-bottom: 20px; /* Adjust margin */
+}
+.icons > div:hover {
+    transform: translateY(-5px); /* Move the icon up by 5 pixels on hover */
+    transition: transform 0.3s ease; /* Apply a smooth transition effect */
+}
+
+
+
 
 /* start Header */
 
@@ -227,20 +244,25 @@ section:nth-child(2) ul {
 
 section:nth-child(2) ul li {
     flex: 0 0 calc(50% - 20px); /* Two columns with a gap of 20px */
-    margin-bottom: 20px;
-    font-size: 20px;
+    margin-bottom: 30px;
+    font-size: 35px;
     color: #000000;
     font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.3s ease; /* Apply transition effect */
 }
+
+section:nth-child(2) ul li:hover {
+    transform: translateY(-5px); /* Move the list item up by 5 pixels on hover */
+}
+
 
 section:nth-child(2) ul li i {
     margin-right: 10px;
     margin-left: 10px;
 }
-
 
 /* start Portfolio */
 .portfolio .boxs .box{
@@ -248,14 +270,11 @@ section:nth-child(2) ul li i {
     position: relative;
     overflow: hidden;
 }
-.portfolio .boxs .box img{
-    width: 100%;
-    height: 100%;
-}
+
 .portfolio .boxs .box:hover img{
     transform: scale(1.2);
-    rotate: -4deg;
-    transition: 0.6s ease-out;
+    rotate: -2deg;
+    transition: 1s ease-out;
 }
 .portfolio .boxs .box .box-hover{
     position: absolute;
@@ -268,7 +287,7 @@ section:nth-child(2) ul li i {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: 0.6s;
+    transition:0.9s;
     opacity: 0;
 }
 .portfolio .boxs .box:hover .box-hover{
@@ -278,6 +297,58 @@ section:nth-child(2) ul li i {
     color: #fff;
     font-size: 25px;
 }
+.portfolio .boxs .box img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill; /* Maintain aspect ratio and cover the entire box */
+}
+
+/* Description styling */
+.box-hover {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: #111111b9;
+    z-index: 2;
+    display: flex;
+    flex-direction: column; /* Arrange elements vertically */
+    justify-content: center;
+    align-items: center;
+    transition: 1s;
+    opacity: 0;
+}
+
+.box-hover h3 {
+    color: #fff;
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.box-hover p {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.box-hover a {
+    display: inline-block;
+    background-color: #ffaa17;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.box-hover a:hover {
+    background-color: white;
+}
+
+
+
 
 /* start Contact */
 
